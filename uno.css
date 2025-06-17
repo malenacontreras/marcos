@@ -1,0 +1,179 @@
+/* Estilo para el carrusel */
+.slider {
+    padding-top: 10px;
+    position: relative;
+    width: 50%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slider-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%; /* Ajuste dinámico */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.slide {
+    min-width: 100%; /* Solo una imagen a la vez */
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Flechas de navegación */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease;
+}
+
+.prev { left: 1px; }
+.next { right: 1px; }
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.product-info{
+    padding-left: 20px;
+    padding-top: 30px;
+}
+.back {
+  background-color: #f2ece8;
+  margin: 20px;
+  border-radius: 20px;
+}
+.price-btn {
+    padding: 20px;
+    margin-top: 60px;
+}
+.propiedades {
+    padding-top: 20px;
+    font-size: 20px;
+    text-align:justify;
+    padding-right: 25px;
+}
+.nombre {
+    font-size: 30px;
+    text-decoration:solid;
+}
+.test {
+    font-size: 29px;
+}
+.price-btn {
+    padding-top:50px;
+    padding-bottom:  50px;
+}
+.productos-relacionados {
+    padding: 20px;
+    text-align: center;
+  }
+.interesar{
+    font-size: 40px;
+    color: #5b090c;
+    font-family: 'MiFuente';
+    margin: 50px;
+}
+  .productos-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .producto-item {
+    width: 200px; /* Tamaño fijo para todos los cuadros */
+    height: 280px; /* Altura fija para uniformidad */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .producto-item img {
+    width: 100%;  /* La imagen ocupa todo el ancho */
+    height: 150px; /* Altura fija para todas las imágenes */
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+    border-radius: 5px;
+  }
+  
+  .producto-item p {
+    margin: 5px 0;
+  }
+  
+  .producto-item button {
+    width: 100%;
+    padding: 8px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .producto-item button:hover {
+    background-color: gray;
+  }
+  
+  .footer {
+    background-color: #21324B;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .footer a {
+    color: #ce472f;
+    text-decoration: none;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-info, .footer-contacto {
+    margin-bottom: 15px;
+  }
+  .producto-item a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 10px;
+  }
+  
+  .producto-item a:hover {
+    background-color: #f8f8f8;
+    border-radius: 10px;
+  }
+  
+  .producto-item img {
+    width: 100%;
+    border-radius: 5px;
+    transition: transform 0.2s;
+  }
+  
+  .producto-item img:hover {
+    transform: scale(1.05);
+  }
+  

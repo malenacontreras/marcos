@@ -1,0 +1,129 @@
+/* ========================= */
+/*       Reset de estilos    */
+/* ========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ========================= */
+/*    Estilos generales      */
+/* ========================= */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* ========================= */
+/*        Encabezado         */
+/* ========================= */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #f2ece8;
+    color: #21324B;
+    position: relative;
+    z-index: 1100;
+}
+.menu-icon, 
+.cart-icon {
+    cursor: pointer;
+    font-size: 24px;
+}
+
+/* ========================= */
+/*   Menú lateral (Sidebar)  */
+/* ========================= */
+.sidebar {
+    position: fixed;
+    left: -250px;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background: #b7dbc8;
+    color: white;
+    transition: left 0.3s ease;
+    border-radius: 10px;
+    z-index: 1000;
+}
+.sidebar.active {
+    left: 0;
+}
+.sidebar ul {
+    list-style: none;
+    padding: 20px;
+}
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+}
+
+/* Botón para cerrar el menú */
+.close-btn {
+    display: block;
+    text-align: right;
+    margin: 10px 5px 5px 5px;
+    padding: 5px;
+    background: #21324b;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* ========================= */
+/*     Barra de búsqueda     */
+/* ========================= */
+.search-bar {
+    display: none;
+    text-align: center;
+    padding: 10px;
+    background: #ffffff;
+    border-bottom: 1px solid #ddd;
+}
+.search-bar input {
+    width: 80%;
+    padding: 8px;
+}
+
+/* ========================= */
+/*      Carrito de compra    */
+/* ========================= */
+.cart {
+    position: fixed;
+    right: -300px;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background: #b7dbc8;
+    color: white;
+    padding: 20px;
+    transition: right 0.3s ease;
+    border-radius: 10px;
+    z-index: 1000;
+}
+.cart.active {
+    right: 0;
+}
+.close-cart {
+    display: block;
+    text-align: left;
+    margin: 5px;
+    padding: 5px;
+    background: #21324b;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.cart ul {
+    list-style: none;
+    margin-top: 10px;
+}

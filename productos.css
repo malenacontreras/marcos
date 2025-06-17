@@ -1,0 +1,381 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.grid-contenedor {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr)); 
+  gap: 20px;
+  justify-items: center; 
+  margin-top: 20px;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url(fondo.svg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow-x: hidden; /* Evita el desplazamiento horizontal */
+}
+
+/* Encabezado */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #f2ece8;
+  color: #21324B;
+  border-radius: 10px;
+  width: 50%;
+  margin: auto;
+}
+
+.menu-icon, .cart-icon {
+  cursor: pointer;
+  font-size: 15px;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  left: -100%;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background: #5b090c;
+  color: white;
+  transition: left 0.3s ease;
+  z-index: 9999;
+  border-radius: 0 10px 10px 0;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar ul {
+  padding: 20px;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+}
+
+/* Barra de búsqueda */
+.search-bar {
+  display: none;
+  text-align: center;
+  padding: 10px;
+  background: white;
+  border-radius: 10px;
+  max-width: 15rem;
+  margin-left: 15rem;
+  margin-top: 1rem;
+}
+
+.search-bar input {
+  width: 90%;
+  padding: 8px;
+}
+
+
+.cart {
+  position: fixed;
+  right: -100%;
+  top: 0;
+  width: 300px;
+  height: 100%;
+  background: #070328;
+  color: white;
+  padding: 20px;
+  transition: right 0.3s ease;
+  border-radius: 10px 0 0 10px;
+  z-index: 9999;
+}
+
+.cart.active {
+  right: 0;
+}
+
+.main-title {
+  font-size: 4rem !important;
+  text-align: center;
+  color: #5b090c;
+  font-family: 'MiFuente';
+  padding: 1px;
+
+}
+
+.title-main {
+  padding: 2rem;
+}
+
+.product1 {
+  grid-column: 1;  
+  grid-row: 1; 
+  text-align: center;
+  border-radius: 25px;
+  background: #eaded5;
+  box-shadow: 5px -5px 10px #c9c4c1, -5px 5px 10px #070328;
+  cursor: pointer;
+  width: 250px;
+  padding: 10px;
+}
+
+.product1 img {
+  width: 105px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.product2 {
+  grid-column: 2;  
+  grid-row: 1; 
+  text-align: center;
+  border-radius: 25px;
+  background: #eaded5;
+  box-shadow: 5px -5px 10px #c9c4c1, -5px 5px 10px #070328;
+  cursor: pointer;
+  width: 250px;
+  padding: 10px;
+}
+
+.product2 img {
+  width: 105px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.product3 {
+  grid-column: 3;  
+  grid-row: 1; 
+  text-align: center;
+  border-radius: 25px;
+  background: #eaded5;
+  box-shadow: 5px -5px 10px #c9c4c1, -5px 5px 10px #070328;
+  cursor: pointer;
+  width: 250px;
+  padding: 10px;
+}
+
+.product3 img {
+  width: 105px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.product4 {
+  grid-column: 4;  
+  grid-row: 1; 
+  text-align: center;
+  border-radius: 25px;
+  background: #eaded5;
+  box-shadow: 5px -5px 10px #c9c4c1, -5px 5px 10px #070328;
+  cursor: pointer;
+  width: 250px;
+  padding: 10px;
+}
+
+.product4 img {
+  width: 105px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+
+.price-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+  border-top: 1px solid #21324B;
+  font-weight: bolder;
+}
+
+.Agregar {
+  background: #070328;
+  border-radius: 10px;
+  color: white;
+  padding: 7px;
+  text-align: right;
+  cursor: pointer;
+  box-shadow: #818386;
+  text-shadow: #21324b;
+}
+
+.cart ul {
+  list-style: none;
+}
+
+.hacer {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  background: #21324b;
+  border-radius: 10px;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Botón de eliminar */
+.button {
+  width: 30px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #21324B;
+  border: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+  cursor: pointer;
+  transition-duration: .3s;
+  overflow: hidden;
+  position: relative;
+}
+
+.svgIcon {
+  width: 12px;
+  transition-duration: .3s;
+  left: 1px;
+}
+
+.svgIcon path {
+  fill: white;
+}
+
+.button:hover {
+  width: 50px;
+  border-radius: 5px;
+  transition-duration: .3s;
+  background-color: rgb(255, 69, 69);
+  align-items: center;
+}
+
+.button:hover .svgIcon {
+  width: 10px;
+  transition-duration: .3s;
+  transform: translateY(60%);
+}
+
+.button::before {
+  position: absolute;
+  top: -20px;
+  content: "Delete";
+  color: white;
+  transition-duration: .3s;
+  font-size: 2px;
+}
+
+.button:hover::before {
+  font-size: 12px;
+  opacity: 1;
+  transform: translateY(25px);
+  transition-duration: .3s;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.cart-item-name {
+  flex-grow: 1;
+}
+
+.delete-btn {
+  margin-left: 10px;
+}
+
+/* Fuente personalizada */
+@font-face {
+  font-family: 'MiFuente';
+  src: url('Savory\ Curry.ttf') format('truetype');
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  header {
+    width: 90%;
+  }
+
+  .main-title {
+    font-size: 2rem;
+  }
+
+  .product {
+    width: calc(50% - 20px);
+    max-width: none;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    width: 80%;
+  }
+
+  .main-title {
+    font-size: 1.5rem;
+  }
+
+  .product {
+    width: 60%;
+    max-width: none;
+  }
+}
+#ordenar-btn{
+  margin-left: 15%;
+  width: 250px;
+  height: 25px;
+  background-color: #070328;
+  color: white;
+  border-radius: 10px;
+}
+#ordenar-opciones {
+  margin-left: 15%;
+}
+
+  .footer {
+    background-color: #21324B;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .footer a {
+    color: #ce472f;
+    text-decoration: none;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-info, .footer-contacto {
+    margin-bottom: 15px;
+  }

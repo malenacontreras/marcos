@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animación de Imagen</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Texto de invitación -->
+  <div id="texto">Clic me</div>
+
+  <!-- Imagen completa inicial -->
+  <img id="imagenEntera" src="img/dibujo_entero.PNG" alt="Dibujo Entero">
+
+  <!-- Imágenes cortadas (inicialmente ocultas con la clase "hidden") -->
+  <img id="parteArriba" class="hidden" src="img/dibujo_parte_arriba.PNG" alt="Parte Arriba">
+  <img id="parteAbajo" class="hidden" src="img/dibujo_parte_de_abajo.PNG" alt="Parte Abajo">
+
+  <!-- Logo de la marca (NO lleva la clase "hidden", se oculta con opacity y escala en CSS) -->
+  <img id="marca" src="xanny-logo.svg" alt="Logo de la Marca">
+
+  <script src="script.js"></script>
+</body>
+</html>

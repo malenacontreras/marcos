@@ -1,0 +1,83 @@
+/* Reinicio básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background-color: #ffffff;
+  }
+  
+  /* Texto de invitación */
+  #texto {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #000;
+    font-size: 40px;
+    z-index: 10;
+    font-family:monospace;
+    transition: opacity 2s ease;
+  }
+  
+  /* Todas las imágenes se posicionan en el centro */
+  img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* Imagen completa inicial */
+  #imagenEntera {
+    width: 300px;
+    cursor: pointer;
+  }
+  
+  /* Clase para ocultar elementos que se mostrarán después (se usa solo para las imágenes cortadas) */
+  .hidden {
+    display: none;
+  }
+  
+  /* Imágenes cortadas */
+  #parteArriba,
+  #parteAbajo {
+    width: 300px;
+    opacity: 0;
+    /* Se animan las propiedades left, top y opacity en 3 segundos */
+    transition: left 3s ease, top 3s ease, opacity 4s ease;
+  }
+  
+  /* Logo de la marca: 
+     - Inicia en el centro con escala 0 y opacity 0 para que esté presente en el DOM pero invisible.
+     - La transición hará el zoom in y fade in.
+  */
+  #marca {
+    max-width: 300px;
+    position: absolute;
+    left: 55%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    transition: transform 3s ease, opacity 3s ease;
+    z-index: 5;
+  }
+  
+  /* Opcional: Ajustes responsivos para móviles */
+  @media (max-width: 600px) {
+    #imagenEntera,
+    #parteArriba,
+    #parteAbajo,
+    #marca {
+      width: 80%;
+      max-width: 300px;
+    }
+  }
+  
+  
